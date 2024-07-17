@@ -11,13 +11,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 5rem;
 }
 /* General ends */
 
 /* Account page start */
 .side-img {
-  width: 50rem;
+  width: 35rem;
 }
 .login-container {
   display: flex;

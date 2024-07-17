@@ -128,7 +128,6 @@ span {
 }
 .table-container {
   width: 100%;
-  align-self: start;
   overflow-x: auto;
   overflow-y: auto;
 }
@@ -139,11 +138,11 @@ table {
 th,
 td {
   padding: 5px;
-  text-align: left;
+  text-align: right !important;
   font-weight: normal;
 }
 thead tr {
-  border-bottom: 1px solid var(--white);
+  border-bottom: 1px solid var(--white) !important;
 }
 /* Calculation page ends */
 
