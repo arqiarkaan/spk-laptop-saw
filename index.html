@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/account.css" />
+
+    <!-- Sweet Alert 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sub-container">
+        <div class="laptop-image">
+          <img src="img/laptop.png" class="side-img" alt="laptop img" />
+        </div>
+        <form class="login-container" id="login-form" action="criteria.html">
+          <div class="form-header">
+            <img src="img/logo.png" alt="laptop logo" class="logo-img" />
+            <span class="welcome-txt">Welcome! 👋</span>
+            <span class="sub-header-txt"
+              >Ready to choose your desired laptop?</span
+            >
+          </div>
+          <div class="login-form">
+            <div class="input-container">
+              <label for="login-username"
+                >Username <span class="important-txt">*</span></label
+              >
+              <input type="text" id="login-username" required />
+            </div>
+            <div class="input-container">
+              <label for="login-password"
+                >Password <span class="important-txt">*</span></label
+              >
+              <input type="password" id="login-password" required />
+            </div>
+            <div class="login-form-bottom">
+              <div class="show-password">
+                <input type="checkbox" onclick="showPassword()" />
+                <span>Show Password</span>
+              </div>
+              <span class="nav-txt nav-txt-2" id="forgot"
+                >Forgot Password?</span
+              >
+            </div>
+          </div>
+          <div class="bottom-form">
+            <input type="submit" class="submit-btn" value="Log In" />
+            <div class="bottom-header">
+              <span>Don't have an account?</span>
+              <a href="register.html" class="nav-txt">Register Here</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
