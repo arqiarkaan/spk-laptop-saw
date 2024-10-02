@@ -1,8 +1,8 @@
 // Forgot password sweet alert start
 document.getElementById("forgot").addEventListener("click", function () {
   Swal.fire({
-    title: "Forgot Password?",
-    html: "If you forget your password, you can call the admin number at <strong>123-456-789</strong>.",
+    title: "Lupa Password?",
+    html: "Jika Anda lupa password Anda, Anda dapat menghubungi nomor admin di <strong>+62 813-1493-5717</strong>.",
     icon: "info",
     confirmButtonColor: "#1e1e1e",
     confirmButtonText: "OK",
@@ -83,15 +83,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   usernameInput.addEventListener("input", function () {
-    validateInput(this, validateUsername, "Username cannot contain spaces");
+    validateInput(
+      this,
+      validateUsername,
+      "Username tidak boleh mengandung spasi"
+    );
   });
 
   passwordInput.addEventListener("input", function () {
-    validateInput(
-      this,
-      validatePassword,
-      "Password must be at least 6 characters long"
-    );
+    validateInput(this, validatePassword, "Password minimal harus 6 karakter");
   });
 
   form.addEventListener("submit", function (e) {
@@ -101,13 +101,13 @@ document.addEventListener("DOMContentLoaded", function () {
       validateInput(
         usernameInput,
         validateUsername,
-        "Username cannot contain spaces"
+        "Username tidak boleh mengandung spasi"
       ) && isValid;
     isValid =
       validateInput(
         passwordInput,
         validatePassword,
-        "Password must be at least 6 characters long"
+        "Password minimal harus 6 karakter"
       ) && isValid;
 
     if (!isValid) {
@@ -169,24 +169,28 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   usernameInput.addEventListener("input", function () {
-    validateInput(this, validateUsername, "Username cannot contain spaces");
+    validateInput(
+      this,
+      validateUsername,
+      "Username tidak boleh mengandung spasi"
+    );
   });
 
   passwordInput.addEventListener("input", function () {
-    validateInput(
-      this,
-      validatePassword,
-      "Password must be at least 6 characters long"
-    );
+    validateInput(this, validatePassword, "Password minimal harus 6 karakter");
     validateInput(
       repasswordInput,
       validateRepassword,
-      "Passwords do not match"
+      "Password dan konfirmasi password tidak sama"
     );
   });
 
   repasswordInput.addEventListener("input", function () {
-    validateInput(this, validateRepassword, "Passwords do not match");
+    validateInput(
+      this,
+      validateRepassword,
+      "Password dan konfirmasi password tidak sama"
+    );
   });
 
   form.addEventListener("submit", function (e) {
@@ -196,19 +200,19 @@ document.addEventListener("DOMContentLoaded", function () {
       validateInput(
         usernameInput,
         validateUsername,
-        "Username cannot contain spaces"
+        "Username tidak boleh mengandung spasi"
       ) && isValid;
     isValid =
       validateInput(
         passwordInput,
         validatePassword,
-        "Password must be at least 6 characters long"
+        "Password minimal harus 6 karakter"
       ) && isValid;
     isValid =
       validateInput(
         repasswordInput,
         validateRepassword,
-        "Passwords do not match"
+        "Password dan konfirmasi password tidak sama"
       ) && isValid;
 
     if (!isValid) {

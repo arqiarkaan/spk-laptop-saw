@@ -140,6 +140,12 @@
 .bottom-form a {
   font-size: 13px;
 }
+.submit-btn:hover {
+  background-color: #3a3939;
+}
+.bottom-header {
+  text-align: center;
+}
 /* Account page start */
 
 /* Media queries start */

@@ -10,20 +10,20 @@ span {
   color: var(--white);
 }
 .color1 {
-  color: var(--rank1) !important;
+  color: var(--rank1);
 }
 .color2 {
-  color: var(--rank2) !important;
+  color: var(--rank2);
 }
 .color3 {
-  color: var(--rank3) !important;
+  color: var(--rank3);
 }
 .container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem;
+  padding: 3rem 15rem;
 }
 .sub-container {
   display: flex;
@@ -61,7 +61,7 @@ span {
 .nav-btn-a {
   text-decoration: none;
   background-color: var(--black-bg);
-  color: var(--white) !important;
+  color: var(--white);
   padding: 10px 25px;
   font-weight: 600;
   border-radius: 7px;
@@ -72,12 +72,12 @@ span {
 .nav-btn-a:hover {
   background-color: var(--white);
   box-shadow: none;
-  color: var(--black-bg) !important;
+  color: var(--black-bg);
 }
 .active {
   text-decoration: none;
   background-color: var(--white);
-  color: var(--black) !important;
+  color: var(--black);
   padding: 10px 25px;
   font-weight: 600;
   border-radius: 7px;
@@ -86,19 +86,7 @@ span {
 .active:hover {
   background-color: var(--black-bg);
   box-shadow: 0 0 0 2px var(--white);
-  color: var(--white) !important;
-}
-.back-btn {
-  color: var(--black-bg) !important;
-  padding: 10px 25px;
-  text-decoration: none;
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--white);
-  border-radius: 7px;
-  transition: var(--tran-03);
+  color: var(--white);
 }
 .nav-btn {
   text-decoration: none;
@@ -113,9 +101,20 @@ span {
 .back-btn:hover {
   background-color: var(--black-bg);
   box-shadow: 0 0 0 2px var(--white);
-  color: var(--white) !important;
+  color: var(--white);
 }
-
+.back-btn {
+  color: var(--black-bg);
+  padding: 10px 25px;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 7px;
+  transition: var(--tran-03);
+}
 .title-txt {
   font-size: 55px;
   font-weight: 300;
@@ -129,7 +128,6 @@ span {
 }
 .table-container {
   width: 100%;
-  overflow-x: scroll;
 }
 table {
   width: 100%;
@@ -141,7 +139,9 @@ td {
   text-align: right !important;
   font-weight: normal;
 }
-
+td {
+  font-size: 12px;
+}
 thead tr {
   border-bottom: 1px solid var(--white) !important;
 }
@@ -167,43 +167,9 @@ button {
 }
 /* Datatables style ends */
 
-/* Media queries start */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   .container {
-    padding: 2rem;
-  }
-  .sub-container {
-    gap: 30px;
-  }
-  .title-txt {
-    font-size: 40px;
-  }
-  .sub-title-txt {
-    font-size: 20px;
-  }
-  .button-container {
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-  .right-btn {
-    width: 100%;
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-
-@media screen and (min-width: 601px) and (max-width: 1024px) {
-  .container {
-    padding: 2.5rem;
-  }
-  .sub-container {
-    gap: 40px;
-  }
-  .header-container {
-    padding: 1.5rem;
+    padding: 2rem 10rem;
   }
   .title-txt {
     font-size: 45px;
@@ -211,35 +177,65 @@ button {
   .sub-title-txt {
     font-size: 22px;
   }
-  .button-container {
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 2rem 5rem;
   }
-  .right-btn {
-    width: 100%;
-    flex-direction: column;
-    gap: 20px;
+  .sub-title-txt {
+    font-size: 20px;
+  }
+  .nav-btn,
+  .back-btn,
+  .nav-btn-a,
+  .active {
+    padding: 8px 20px;
   }
 }
 
-@media only screen and (min-width: 1025px) {
+@media screen and (max-width: 768px) {
   .container {
-    padding: 3rem;
-  }
-  .sub-container {
-    gap: 60px;
-  }
-  .header-container {
     padding: 2rem;
   }
+  .sub-container {
+    gap: 30px;
+  }
   .title-txt {
-    font-size: 55px;
+    font-size: 30px;
   }
   .sub-title-txt {
-    font-size: 25px;
+    font-size: 18px;
+  }
+  .table-container {
+    overflow-x: scroll;
+  }
+  .nav-btn,
+  .back-btn {
+    padding: 8px 20px;
+  }
+  .back-btn,
+  .nav-btn {
+    width: 100%;
+    text-align: center;
+  }
+  th,
+  td {
+    padding: 4px;
+    font-size: 14px;
   }
 }
-/* Media queries ends */
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 1rem;
+  }
+  .sub-title-txt {
+    font-size: 16px;
+  }
+  th,
+  td {
+    padding: 3px;
+    font-size: 13px;
+  }
+}

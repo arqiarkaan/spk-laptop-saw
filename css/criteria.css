@@ -18,7 +18,7 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 3.5rem;
+  padding: 3rem;
 }
 .sub-container {
   display: flex;
@@ -137,15 +137,54 @@ select {
   gap: 15px;
 }
 .title-txt {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
+}
+.logout-button {
+  z-index: 999;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  background: white;
+  border: none;
+  color: var(--black);
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  transition: padding 0.3s ease, width 0.3s ease;
+  width: 35px;
+  border-radius: 10px;
+}
+.logout-button .logout-text {
+  margin-left: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(-10px);
+  color: var(--black);
+}
+.logout-button:hover {
+  width: 110px;
+}
+.logout-button:hover .logout-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+.logout-button:active,
+.logout-button:focus {
+  outline: none;
+}
+.show {
+  display: none;
 }
 /* Right side ends*/
 
 /* Media queries start */
 @media screen and (max-width: 1400px) {
   .container {
-    padding: 0 2rem;
+    height: auto;
   }
   .sub-container {
     gap: 3rem;
@@ -162,6 +201,10 @@ select {
   .choosing-wrapper {
     gap: 2.5rem;
   }
+  .sub-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
   .text-container {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -169,11 +212,7 @@ select {
   }
 }
 
-@media screen and (max-width: 1100px) {
-  .sub-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
+@media screen and (max-width: 1200px) {
   .left-box,
   .right-box {
     width: 100%;
@@ -186,11 +225,8 @@ select {
   .attribute-wrap {
     width: 100%;
   }
-}
-
-@media screen and (max-width: 1200px) {
-  .container {
-    height: auto;
+  .show {
+    display: inline-block;
   }
   .title {
     font-size: 45px;
@@ -205,9 +241,6 @@ select {
     width: 100%;
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-  .title-txt {
-    font-size: 24px;
   }
 }
 
@@ -231,7 +264,7 @@ select {
     padding: 1.5rem;
   }
   .title-txt {
-    font-size: 20px;
+    font-size: 18px;
   }
   p {
     font-size: 11px;
